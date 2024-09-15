@@ -20,7 +20,7 @@ app.get("/", (_, res) => {
  * Array of whitelisted domains.
  * @type {string[]}
  */
-const whitelistedDomains = [localhost];
+const whitelistedDomains = ['bipin.xyz'];
 
 /**
  * Handles TLS (Transport Layer Security) check for a given domain.
