@@ -13,14 +13,27 @@ app.use(express.urlencoded({ extended: true }));
  * @param {Object} res - Express response object.
  */
 app.get("/", (_, res) => {
-  res.send("Hello World");
+  // Send an HTML response
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello</title>
+    </head>
+    <body>
+        <h1>Hello there</h1>
+    </body>
+    </html>
+  `);
 });
 
 /**
  * Array of whitelisted domains.
  * @type {string[]}
  */
-const whitelistedDomains = ['bipin.xyz'];
+const whitelistedDomains = ['bipin.xyz', 'buildmystore.org'];
 
 /**
  * Handles TLS (Transport Layer Security) check for a given domain.
